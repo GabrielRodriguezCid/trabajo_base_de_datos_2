@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajo de base de datos 2</title>
     <style>
+      
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+      }
+      body{
+        background-color: #e18354;
+        font-family: 'Poppins', sans-serif;
+      }
       .container {
         display: flex;
         justify-content: center;
@@ -25,10 +40,11 @@
       }
       
       .table {
+        background-color: #f0f0f0;
         width: 80%;
-        height: 10%;
         border: 2px solid black; /* Grosor del borde */
         border-collapse: collapse; /* Para asegurarse de que las celdas se fusionen correctamente */
+        table-layout: auto;
       }
       
       .table th,
@@ -36,9 +52,16 @@
         border: 1px solid black; /* Borde para las celdas */
         padding: 8px; /* Espaciado interno de las celdas */
       }
+      .centrado {
+        width: 300px; /* Ancho del div */
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
     </style>
 </head>
 <body>
+  
 
 <div class="container">
   <div class="title">Base de datos II</div>
@@ -73,5 +96,6 @@
         document.getElementById('data').innerHTML = body;
     }
 </script>
+<div class="centrado"><a href="https://youtu.be/r3n1EgAeHhw?si=wUIx9feEVLfzW694">No Abri Por Su Salud </a></div>
 </body>
 </html>
