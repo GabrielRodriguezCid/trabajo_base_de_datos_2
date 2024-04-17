@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trabajo de base de datos 2</title>
     <style>
-      
-      *{
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         text-decoration: none;
         list-style: none;
       }
-      body{
+      body {
         background-color: #e18354;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
       }
       .container {
         display: flex;
@@ -27,18 +29,18 @@
         flex-direction: column;
         height: 100vh;
       }
-      
+
       .title {
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 10px;
       }
-      
+
       .subtitle {
-        font-size: 18px;
+        font-size: 12px;
         margin-bottom: 20px;
       }
-      
+
       .table {
         background-color: #f0f0f0;
         width: 80%;
@@ -46,7 +48,7 @@
         border-collapse: collapse; /* Para asegurarse de que las celdas se fusionen correctamente */
         table-layout: auto;
       }
-      
+
       .table th,
       .table td {
         border: 1px solid black; /* Borde para las celdas */
@@ -57,44 +59,50 @@
         padding: 20px;
         justify-content: center;
         align-items: center;
-    }
+      }
     </style>
-</head>
-<body>
-<div class="container">
-  <div class="title">Base de datos II</div>
-  <div class="subtitle">Integrantes: Luciano jofre, Gabriel Rodriguez, Juan Pablo Llensa, Uriel marquez </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Correo electrónico</th>
-      </tr>
-    </thead>
-    <tbody id="data">
-      <!-- Aquí se mostrarán los datos de la API -->
-    </tbody>
-  </table>
-</div>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Base de datos II</div>
+      <div class="subtitle">
+        Integrantes: Luciano jofre, Gabriel Rodriguez, Juan Pablo Llensa, Uriel
+        marquez
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo electrónico</th>
+          </tr>
+        </thead>
+        <tbody id="data">
+          <!-- Aquí se mostrarán los datos de la API -->
+        </tbody>
+      </table>
+    </div>
 
-<script> 
-    let url = 'https://jsonplaceholder.typicode.com/users/';
-    fetch(url)
-        .then(response => response.json())
-        .then(data => mostrarData(data))
-        .catch(error => console.log(error))
+    <script>
+      let url = "https://jsonplaceholder.typicode.com/users/";
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => mostrarData(data))
+        .catch((error) => console.log(error));
 
-        const mostrarData = (data) => {
-    console.log(data)
-    let body = ""
-    for (var i = 0; i < data.length; i++) {      
-       body += `<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].email}</td></tr>`;
-    }
-    document.getElementById('data').innerHTML = body;
-}
-
-</script>
-<div class="centrado"><a href="https://youtu.be/r3n1EgAeHhw?si=wUIx9feEVLfzW694">No Abri Por Su Salud </a></div>
-</body>
+      const mostrarData = (data) => {
+        console.log(data);
+        let body = "";
+        for (var i = 0; i < data.length; i++) {
+          body += `<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].email}</td></tr>`;
+        }
+        document.getElementById("data").innerHTML = body;
+      };
+    </script>
+    <div class="centrado">
+      <a href="https://youtu.be/r3n1EgAeHhw?si=wUIx9feEVLfzW694"
+        >No Abri Por Su Salud
+      </a>
+    </div>
+  </body>
 </html>
