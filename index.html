@@ -18,14 +18,14 @@
     <style>
       /* Estilos para el tema claro */
       .light-theme {
-        background-color: #e18354; /* Color pastel actual */
+        background-color: #143885; /* Color pastel actual */
         color: #000; /* Texto oscuro sobre fondo claro */
       }
 
       /* Estilos para el tema oscuro */
       .dark-theme {
         background-color: #000; /* Fondo negro */
-        color: #fff; /* Texto blanco sobre fondo oscuro */
+        color: #beb8c4; /* Texto blanco sobre fondo oscuro */
       }
 
       /* Estilos específicos para el tema oscuro en la tabla */
@@ -61,7 +61,7 @@
         margin-bottom: 20px;
       }
       .table {
-        background-color: #f0f0f0;
+        background-color: #c3d8fd;
         width: 80%;
         border: 2px solid black;
         border-collapse: collapse;
@@ -122,9 +122,8 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">ID</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Correo electrónico</th>
+            <th scope="col">Descripcion</th>
           </tr>
         </thead>
         <tbody id="data">
@@ -146,11 +145,11 @@
 
     <script>
       async function fetchData() {
-        let url = "https://jsonplaceholder.typicode.com/users/";
+        let url = "https://api.fbi.gov/wanted/v1/list";
         try {
           const response = await fetch(url);
           const data = await response.json();
-          mostrarData(data);
+          mostrarData(data.items);
         } catch (error) {
           console.log(error);
         }
@@ -159,18 +158,19 @@
       const mostrarData = (data) => {
         let body = "";
         data.forEach(function(item) {
-          body += `<tr><td>${item.id}</td><td>${item.name}</td><td>${item.email}</td></tr>`;
+          body += `<tr><td>${item.title}</td><td>${item.description}</td></tr>`;
         });
         document.getElementById("data").innerHTML = body;
       };
+    
       function toggleTheme() {
         const body = document.body;
         body.classList.toggle("dark-theme");
       }
-
+    
       function aceptarCookies() {
         document.getElementById("cookie-banner").style.display = "none";
-
+    
         document.cookie =
           "cookies_aceptadas=true; expires=" +
           new Date(
@@ -178,17 +178,17 @@
           ).toUTCString() +
           "; path=/";
       }
-
+    
       function verificarCookiesAceptadas() {
         if (document.cookie.indexOf("cookies_aceptadas=true") === -1) {
           document.getElementById("cookie-banner").style.display = "block";
         }
       }
-
+    
       window.onload = () => {
-    verificarCookiesAceptadas();
-    fetchData(); // Llamado a la función fetchData para cargar los datos automáticamente
-    };
+        verificarCookiesAceptadas();
+        fetchData(); // Llamado a la función fetchData para cargar los datos automáticamente
+      };
     </script>
     <div class="centrado">
       <a href="https://youtu.be/r3n1EgAeHhw?si=wUIx9feEVLfzW694"
