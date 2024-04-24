@@ -155,15 +155,14 @@
           console.log(error);
         }
       }
-
+    
       const mostrarData = (data) => {
         let body = "";
-        for (let i = 0; i < data.length; i++) {
-          body += `<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].email}</td></tr>`;
-        }
+        data.forEach(function(item) {
+          body += `<tr><td>${item.id}</td><td>${item.name}</td><td>${item.email}</td></tr>`;
+        });
         document.getElementById("data").innerHTML = body;
       };
-      
       function toggleTheme() {
         const body = document.body;
         body.classList.toggle("dark-theme");
@@ -186,7 +185,10 @@
         }
       }
 
-      window.onload = verificarCookiesAceptadas;
+      window.onload = () => {
+    verificarCookiesAceptadas();
+    fetchData(); // Llamado a la función fetchData para cargar los datos automáticamente
+    };
     </script>
     <div class="centrado">
       <a href="https://youtu.be/r3n1EgAeHhw?si=wUIx9feEVLfzW694"
