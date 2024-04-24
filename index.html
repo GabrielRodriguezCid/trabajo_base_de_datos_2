@@ -145,11 +145,16 @@
     </div>
 
     <script>
-      let url = "https://jsonplaceholder.typicode.com/users/";
-      fetch(url)
-        .then((response) => response.json())
-        .then((data) => mostrarData(data))
-        .catch((error) => console.log(error));
+      async function fetchData() {
+        let url = "https://jsonplaceholder.typicode.com/users/";
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          mostrarData(data);
+        } catch (error) {
+          console.log(error);
+        }
+      }
 
       const mostrarData = (data) => {
         let body = "";
@@ -158,7 +163,7 @@
         }
         document.getElementById("data").innerHTML = body;
       };
-
+      
       function toggleTheme() {
         const body = document.body;
         body.classList.toggle("dark-theme");
