@@ -2,73 +2,86 @@
 .light-theme {
     background-color: #143885; /* Color pastel actual */
     color: #000; /* Texto oscuro sobre fondo claro */
-  }
+}
 
-  /* Estilos para el tema oscuro */
-  .dark-theme {
+/* Estilos para el tema oscuro */
+.dark-theme {
     background-color: #000; /* Fondo negro */
     color: #beb8c4; /* Texto blanco sobre fondo oscuro */
-  }
+}
 
-  /* Estilos específicos para el tema oscuro en la tabla */
-  .dark-theme .table th,
-  .dark-theme .table td {
+/* Estilos específicos para el tema oscuro en la tabla */
+.dark-theme .table th,
+.dark-theme .table td {
     color: #000;
-  }
+}
 
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-  }
-  body {
+}
+
+body {
     font-family: "Poppins", sans-serif;
-  }
-  .container {
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
-  }
-  .title {
+}
+
+.title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  .subtitle {
+}
+
+.subtitle {
     font-size: 18px;
     margin-bottom: 20px;
-  }
-  .table {
-    background-color: #c3d8fd;
+}
+
+.table-container {
     width: 80%;
+    max-height: 300px; /* Altura máxima de la tabla */
+    overflow: auto; /* Agregar barra de desplazamiento cuando la tabla exceda la altura máxima */
+}
+
+.table {
+    background-color: #c3d8fd;
+    width: 100%; /* Ajustar el ancho de la tabla al contenedor */
     border: 2px solid black;
     border-collapse: collapse;
     table-layout: auto;
-  }
-  .table th,
-  .table td {
+}
+
+.table th,
+.table td {
     border: 1px solid black;
     padding: 8px;
-  }
-  .centrado {
+}
+
+.centrado {
     width: 300px;
     padding: 20px;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  #theme-toggle {
+#theme-toggle {
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 999;
-  }
+}
 
-  .cookie-banner {
+.cookie-banner {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -77,17 +90,17 @@
     color: #fff;
     padding: 10px;
     text-align: center;
-  }
+}
 
-  .cookie-banner p {
+.cookie-banner p {
     margin: 0;
     font-size: 14px;
-  }
+}
 
-  .cookie-banner button {
+.cookie-banner button {
     background-color: #e18354;
     color: #fff;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-  }
+}
