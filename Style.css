@@ -1,0 +1,93 @@
+/* Estilos para el tema claro */
+.light-theme {
+    background-color: #143885; /* Color pastel actual */
+    color: #000; /* Texto oscuro sobre fondo claro */
+  }
+
+  /* Estilos para el tema oscuro */
+  .dark-theme {
+    background-color: #000; /* Fondo negro */
+    color: #beb8c4; /* Texto blanco sobre fondo oscuro */
+  }
+
+  /* Estilos específicos para el tema oscuro en la tabla */
+  .dark-theme .table th,
+  .dark-theme .table td {
+    color: #000;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .table {
+    background-color: #c3d8fd;
+    width: 80%;
+    border: 2px solid black;
+    border-collapse: collapse;
+    table-layout: auto;
+  }
+  .table th,
+  .table td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  .centrado {
+    width: 300px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .cookie-banner p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .cookie-banner button {
+    background-color: #e18354;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
