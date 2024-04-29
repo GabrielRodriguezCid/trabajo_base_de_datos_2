@@ -1,21 +1,12 @@
-/* Estilos para el tema claro */
 .light-theme {
-    background-color: #143885; /* Color pastel actual */
-    color: #000; /* Texto oscuro sobre fondo claro */
-}
-
-/* Estilos para el tema oscuro */
-.dark-theme {
-    background-color: #000; /* Fondo negro */
-    color: #beb8c4; /* Texto blanco sobre fondo oscuro */
-}
-
-/* Estilos específicos para el tema oscuro en la tabla */
-.dark-theme .table th,
-.dark-theme .table td {
+    background: linear-gradient(to bottom, #ffffff, #c3d8fd);
     color: #000;
 }
 
+.dark-theme {
+    background: linear-gradient(to bottom, #000000, #1b1041);
+    color: #ffffff; 
+}
 * {
     margin: 0;
     padding: 0;
@@ -37,24 +28,27 @@ body {
 }
 
 .title {
-    font-size: 24px;
+    font-size: 80px;
     font-weight: bold;
     margin-bottom: 10px;
+    font-family: "Anton", sans-serif;
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: 30px;
     margin-bottom: 20px;
+    font-family: "Anton", sans-serif;
 }
 
 .table-container {
-    width: 80%;
-    max-height: 450px; /* Altura máxima de la tabla */
+    width: 90%;
+    max-height: 600px; 
     overflow: auto; /* Agregar barra de desplazamiento cuando la tabla exceda la altura máxima */
+    font-family: "Anton", sans-serif;
 }
 
 .table {
-    background-color: #c3d8fd;
+    background-color: #ffffff;
     width: 100%; /* Ajustar el ancho de la tabla al contenedor */
     border: 2px solid black;
     border-collapse: collapse;
@@ -63,7 +57,8 @@ body {
 
 .table th,
 .table td {
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
+    color: #333;
     padding: 8px;
 }
 
@@ -75,18 +70,26 @@ body {
 }
 
 #theme-toggle {
+    background: linear-gradient(to bottom, #b3a7e7, #6340fd);
+    border-radius: 20px; /* Redondea los bordes del botón */
+    padding: 10px 20px; /* Ajusta el espacio interior del botón */
+    background-color: #6e54e1; /* Color de fondo predeterminado */
+    color: #fff; /* Color del texto */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer;
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 20px; /* Corrige la posición del botón */
     z-index: 999;
 }
+
 
 .cookie-banner {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -98,9 +101,17 @@ body {
 }
 
 .cookie-banner button {
-    background-color: #e18354;
-    color: #fff;
+    background: linear-gradient(to bottom, #b3a7e7, #6e54e1);
+    border-radius: 20px; /* Redondea los bordes del botón */
+    padding: 5px 10px; /* Ajusta el espacio interior del botón */
+    background-color: #6e54e1; /* Color de fondo predeterminado */
+    color: #fff; /* Color del texto */
     border: none;
-    padding: 5px 10px;
     cursor: pointer;
+}
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
