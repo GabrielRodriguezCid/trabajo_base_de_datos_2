@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Se agregaron los enlaces a las fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Jersey+25&display=swap" rel="stylesheet">
+    <!-- Se agregó el enlace al archivo CSS -->
     <link rel="stylesheet" href="style.css">
-    <title>Trabajo de base de datos 2</title>
+    <title>FBI</title>
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #000;
+            color: #888;
+            padding: 10px 0;
+        }
+    </style>
 </head>
-<body class="light-theme">
-    <!-- Por defecto, inicia con el tema claro -->
+<body class="dark-theme"> <!-- Se establece el tema oscuro por defecto -->
     <div class="container">
-        <div class="title">Base de datos II</div>
-        <div class="subtitle">
-            Integrantes: Luciano Jofre, Gabriel Rodriguez, Juan Pablo Llensa, Uriel Marquez
+        <div class="logo-container">
+            <img src="pngwing.com.png" alt="FBI Logo" class="logo">
+            <div class="title">FBI</div>
         </div>
+        <div class="subtitle">Classified documents</div>
         <div class="table-container">
             <table class="table" id="data">
                 <!-- Aquí se mostrarán los datos de la API -->
             </table>
         </div>
     </div>
-    <button id="theme-toggle" onclick="toggleTheme()">Cambiar tema</button>
-    <!-- Banner de cookies -->
-    <div id="cookie-banner" class="cookie-banner">
-        <p>Este sitio web utiliza cookies para garantizar que obtengas la mejor experiencia en nuestro sitio web.</p>
-        <button onclick="aceptarCookies()">Aceptar</button>
-    </div>
+    <button id="theme-toggle" onclick="toggleTheme()" class="theme-toggle">Cambiar tema</button>
+    <!-- Se agregó la referencia al archivo JavaScript -->
     <script src="script.js"></script>
-    <div class="centrado">
-        <a href="https://youtu.be/r3n1EgAeHhw?si=wUIx9feEVLfzW694">No clickear por su salud mental</a>
-    </div>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>¡Juntos por un mundo más seguro! Reporta cualquier actividad sospechosa.</p>
+    </footer>
 </body>
 </html>
